@@ -19,7 +19,7 @@ The model accepts a bacterial protein FASTA file as input and uses proteome-deri
 
 ## Citation
 If you use Bacion in your research, please cite:
-Zindal, b. (2026). Bacion: Prediction of the Optimal NaCl Concentration for Bacterial Growth (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.22069575
+Zindal, B. (2026). Bacion: Prediction of the Optimal NaCl Concentration for Bacterial Growth (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.22069575
 
 ## Repository structure
 
