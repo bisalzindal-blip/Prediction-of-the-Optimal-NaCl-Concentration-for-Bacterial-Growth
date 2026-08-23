@@ -1,15 +1,16 @@
 """
 BACion prediction module.
 
-Loads the trained XGBoost model and predicts the optimal NaCl
-concentration for bacterial growth from a bacterial proteome FASTA.
+Loads the trained XGBoost model and predicts the maximum NaCl
+concentration supporting bacterial growth from a bacterial
+proteome FASTA.
 """
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, Optional, Union
+from typing import Any, Dict, Union
 
 import numpy as np
 import pandas as pd
@@ -42,18 +43,18 @@ class BACionPredictor:
     ) -> None:
 
         self.model_path = Path(model_path)
+
         self.feature_config_path = Path(
             feature_config_path
         )
+
         self.feature_names_path = Path(
             feature_names_path
         )
 
         self._check_files()
 
-
         # Load feature configuration
-
         with open(
             self.feature_config_path,
             "r",
@@ -62,7 +63,6 @@ class BACionPredictor:
 
             self.feature_config = json.load(handle)
 
-   
         # Load feature names
         with open(
             self.feature_names_path,
@@ -96,7 +96,6 @@ class BACionPredictor:
             )
 
         # Load XGBoost model
-
         self.model = xgb.XGBRegressor()
 
         self.model.load_model(
@@ -130,7 +129,7 @@ class BACionPredictor:
         fasta_path: Union[str, Path],
     ) -> pd.DataFrame:
         """
-        Calculate and align features for a proteome.
+        Calculate and align features for a bacterial proteome.
 
         Parameters
         ----------
@@ -159,7 +158,8 @@ class BACionPredictor:
         fasta_path: Union[str, Path],
     ) -> float:
         """
-        Predict the optimal NaCl concentration.
+        Predict the maximum NaCl concentration supporting
+        bacterial growth.
 
         Parameters
         ----------
@@ -169,7 +169,8 @@ class BACionPredictor:
         Returns
         -------
         float
-            Predicted NaCl concentration.
+            Predicted maximum NaCl concentration supporting
+            bacterial growth, expressed as percent NaCl.
         """
 
         X = self.calculate_features(
@@ -187,8 +188,8 @@ class BACionPredictor:
         fasta_path: Union[str, Path],
     ) -> Dict[str, Any]:
         """
-        Predict optimal NaCl concentration and return
-        a structured result.
+        Predict the maximum NaCl concentration supporting
+        bacterial growth and return a structured result.
 
         Parameters
         ----------
@@ -218,7 +219,7 @@ class BACionPredictor:
             "model_version": "1.0.0",
             "input_file": fasta_path.name,
             "protein_count": None,
-            "predicted_optimal_NaCl_percent": predicted_nacl,
+            "predicted_maximum_NaCl_percent": predicted_nacl,
             "feature_count": int(X.shape[1]),
         }
 
