@@ -51,9 +51,8 @@ class BACionPredictor:
 
         self._check_files()
 
-        # ----------------------------------------------------
+
         # Load feature configuration
-        # ----------------------------------------------------
 
         with open(
             self.feature_config_path,
@@ -63,10 +62,8 @@ class BACionPredictor:
 
             self.feature_config = json.load(handle)
 
-        # ----------------------------------------------------
+   
         # Load feature names
-        # ----------------------------------------------------
-
         with open(
             self.feature_names_path,
             "r",
@@ -98,9 +95,7 @@ class BACionPredictor:
                 "of feature names."
             )
 
-        # ----------------------------------------------------
         # Load XGBoost model
-        # ----------------------------------------------------
 
         self.model = xgb.XGBRegressor()
 
