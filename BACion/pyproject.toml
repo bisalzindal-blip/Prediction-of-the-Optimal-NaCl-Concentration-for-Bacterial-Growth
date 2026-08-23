@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "BACion"
 version = "1.0.0"
-description = "BACion: Prediction of the Optimal NaCl Concentration for Bacterial Growth"
+description = "BACion: Prediction of the Maximum NaCl Concentration Supporting Bacterial Growth"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { file = "LICENSE" }
@@ -17,7 +17,7 @@ authors = [
 keywords = [
     "bacteria",
     "NaCl",
-    "salt",
+    "salt tolerance",
     "growth",
     "proteome",
     "machine learning",
