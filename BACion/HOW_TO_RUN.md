@@ -8,7 +8,7 @@ FASTA proteome.
 
 
 
-# Method 1 — Google Colab
+# Google Colab
 
 This is the **recommended method for most users**.
 
