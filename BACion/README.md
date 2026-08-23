@@ -6,7 +6,6 @@ BACion is a proteome-based machine-learning tool designed to predict the optimal
 
 The model accepts a bacterial protein FASTA file as input and uses proteome-derived features with an XGBoost regression model to estimate the optimal NaCl concentration.
 
----
 
 ## Features
 
@@ -18,7 +17,6 @@ The model accepts a bacterial protein FASTA file as input and uses proteome-deri
 - Example proteome included
 - Model and feature configuration distributed with the repository
 
----
 
 ## Repository structure
 
