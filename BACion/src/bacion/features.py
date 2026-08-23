@@ -231,9 +231,8 @@ def proteome_features(
 
     features = {}
 
-    # --------------------------------------------------------
+  
     # Amino-acid composition
-    # --------------------------------------------------------
 
     aa_features = proteome_amino_acid_composition(
         sequences
@@ -242,9 +241,8 @@ def proteome_features(
     for aa, value in aa_features.items():
         features[f"AA_{aa}"] = value
 
-    # --------------------------------------------------------
+
     # Basic proteome statistics
-    # --------------------------------------------------------
 
     features.update(
         sequence_statistics(sequences)
