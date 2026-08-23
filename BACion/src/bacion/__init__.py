@@ -2,7 +2,7 @@
 BACion
 ------
 
-Prediction of the Optimal NaCl Concentration for Bacterial Growth.
+Predicted maximum NaCl concentration supporting bacterial growth
 """
 
 __version__ = "1.0.0"
