@@ -14,7 +14,7 @@ No local Python installation is required.
 
 Click the button below:
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bisalzindal-blip/Prediction-of-the-Optimal-NaCl-Concentration-for-Bacterial-Growth/blob/main/BACion/notebooks/BACion_Colab.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bisalzindal-blip/Prediction-of-the-Maximum-NaCl-Concentration-Supporting-Bacterial-Growth/blob/main/BACion/notebooks/BACion_Colab.ipynb)
 
 ## Step 2 — Run the BACion cell
 
